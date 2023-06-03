@@ -9,9 +9,8 @@ export const GlobalStyles = css`
 
   body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
-      'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
-      'Helvetica Neue', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+      'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     background: ${theme.colors.mainBackground};
     min-height: 100vh;
 
@@ -25,7 +24,7 @@ export const GlobalStyles = css`
   h5,
   h6,
   p {
-    margin-top: 0;
+    margin: 0;
   }
 
   ul,
@@ -56,7 +55,6 @@ export const GlobalStyles = css`
   }
 
   code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-      monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
   }
 `;

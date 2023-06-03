@@ -1,31 +1,47 @@
+import {
+  Container,
+  Section,
+  Heading,
+  Profile,
+  Statistics,
+  FriendList,
+  TransactionHistory,
+} from 'components';
+
 import user from 'data/user.json';
 import data from 'data/data.json';
-import { Profile } from '../Profile/Profile';
-import { Statistics } from 'components/Statistics/Statistics.jsx';
+import friends from 'data/friends.json';
+import transactions from 'data/transactions.json';
 
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101',
-      }}
-    >
-      <Profile
-        userName={user.username}
-        tag={user.tag}
-        location={user.location}
-        avatar={user.avatar}
-        followers={user.stats.followers}
-        views={user.stats.views}
-        likes={user.stats.likes}
-      />
-
-      <Statistics title="Upload stats" stats={data} />
-    </div>
+    <Section>
+      <Container>
+        <Heading marginBottom="50px" textAlign="center">
+          Task 1
+        </Heading>
+        <Profile
+          userName={user.username}
+          tag={user.tag}
+          location={user.location}
+          avatar={user.avatar}
+          followers={user.stats.followers}
+          views={user.stats.views}
+          likes={user.stats.likes}
+        />
+        <Heading marginTop="50px" marginBottom="50px" textAlign="center">
+          Task 2
+        </Heading>
+        <Statistics title="Upload stats" stats={data} />
+        <Heading marginTop="50px" marginBottom="50px" textAlign="center">
+          Task 3
+        </Heading>
+        <FriendList friends={friends} />
+        <Heading marginTop="50px" marginBottom="50px" textAlign="center">
+          Task 4
+        </Heading>
+        <TransactionHistory items={transactions} />
+      </Container>
+    </Section>
   );
 };

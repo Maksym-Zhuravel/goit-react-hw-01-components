@@ -1,10 +1,12 @@
 import styled from '@emotion/styled';
+import { getRandomHexColor } from 'service/RandomColor';
 
 export const StatisticBox = styled.li`
   display: flex;
   flex-direction: column;
   align-items: center;
 
+  background: ${props => getRandomHexColor()};
   box-shadow: ${props => props.theme.shadows.small};
 
   padding-top: ${props => props.theme.spacing(5)};
